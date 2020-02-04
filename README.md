@@ -1,1 +1,1 @@
-"# mapublisher-map" 
+# Mapublisher Map - Website Template
