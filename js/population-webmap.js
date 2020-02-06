@@ -3,15 +3,15 @@
  */
 function showMap(map) {
 
-  $('#mapContainer').addClass('hide');
-  $('#legend').addClass('hide');
+  $('#mapContainer, #legend').addClass('hide');
   $('#mapBusyPanel').removeClass('hide');
 
   $('#mapIFrame').attr('src', 'maps/' + map.toLowerCase() + '/index.html');
+  $('.header>h3').html(map.replace('-', ' '))
 
+  // artificial 1s busy panel to replace bad flickering with an okay-ish one
   window.setTimeout(() => {
-    $('#mapContainer').removeClass('hide');
-    $('#legend').removeClass('hide');
+    $('#mapContainer, #legend').removeClass('hide');
     $('#mapBusyPanel').addClass('hide');
   }, 1000);
 

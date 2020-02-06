@@ -4,7 +4,9 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="author" content="Maria Clarke, Adam Hack, Stats Wong and Thomas Zuberbühler">
+    <meta name="description" content="Interactive Webmap Assignment using Mapublisher">
+    
     <title>Population in Nova Scotia</title>
 
     <link rel="stylesheet" href="./css/bootstrap-4.4.1/bootstrap.css">
@@ -29,7 +31,7 @@
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Population in Nova Scotia</a>
+      <a class="navbar-brand" href="#">Population Statistics</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -84,16 +86,30 @@
       </form>
     </nav>
 
-    <div class="container">
+    <div class="container header">
+      <h3>Nova Scotia</h3>
+    </div>
+
+    <div class="container content">
       <div id="mapContainer" class="hide">
+        <!-- don't use Mapublisher Webmap Export a real world web application, use d3.js or something similar instead !!! -->
+        <!-- this is a workaround to meet the assignment requirements -->
         <iframe id="mapIFrame" src="maps/nova-scotia/index.html" title="Map" width="900" height="500"></iframe>
       </div>
       <div id="mapBusyPanel" class="hide">
-        I am busy
+        <div class="text-center">
+          <div class="spinner-border" role="status">
+          </div>
+          <div style="margin-top: 10px;">Loading...</div>
+        </div>
       </div>
       <div id="legend" class="hide" style="background-color: pink;">
         Legend
       </div>
+    </div>
+
+    <div class="container">
+      © Maria Clarke, Adam Hack, Stats Wong and Thomas Zuberbühler
     </div>
 
     <script type="text/javascript">
