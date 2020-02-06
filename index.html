@@ -3,6 +3,7 @@
   <head>
 
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Population in Nova Scotia</title>
 
@@ -11,13 +12,42 @@
     <script src="./js/bootstrap-4.4.1/bootstrap.js" charset="utf-8"></script>
 
     <style media="screen">
-    
+
       .hide {
         display: none;
       }
 
       nav .dropdown-item, nav .nav-link {
         cursor: pointer;
+      }
+
+      body > .container {
+        margin-top: 1rem;
+        display: flex;
+        position: relative;
+      }
+
+      body, nav, .container {
+        min-width: 1050px !important;
+      }
+
+      #legend {
+        margin-left: 1rem;
+        padding: 5px;
+        min-width: 190px;
+        width: 100%;
+        height: 100%;
+      }
+
+      @media only screen and (max-width: 1200px) {
+        #legend {
+          margin-left: 0;
+          position: absolute;
+          top: 0;
+          right: 0;
+          max-width: 190px;
+          height: calc(100% - 5px);
+        }
       }
 
     </style>
@@ -111,6 +141,9 @@
     <div class="container">
       <div id="mapContainer" class="hide">
         <iframe id="mapIFrame" src="iframe-nova-scotia.html" title="Map" width="900" height="500"></iframe>
+      </div>
+      <div id="legend" style="background-color: pink;">
+dad
       </div>
     </div>
 
