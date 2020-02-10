@@ -15,6 +15,7 @@ body > .container.content {
   position: relative;
 }
 
+/*
 body > .container.header > h3 {
   text-transform: lowercase;
 }
@@ -22,6 +23,7 @@ body > .container.header > h3 {
 body > .container.header > h3::first-letter {
   text-transform: uppercase;
 }
+*/
 
 body, nav, .container {
   min-width: 985px !important;
@@ -29,6 +31,26 @@ body, nav, .container {
 
 body {
   overflow-y: scroll;
+}
+
+.nav-item.active {
+  background-color: #BED0DC;
+  transition: background-color 1s linear;
+}
+
+nav.navbar {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+nav.navbar .nav-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.dropdown-item.active {
+  color: #000000;
+  background-color: #BED0DC;
 }
 
 #legend {
@@ -61,4 +83,8 @@ body {
     height: calc(100% - 20px);
     z-index: 1000;
   }
+}
+
+iframe {
+  border: 1px solid #4B4B4B;
 }
