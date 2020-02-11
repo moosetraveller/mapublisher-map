@@ -3,7 +3,7 @@
   <head>
 
     <meta charset="utf-8">
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Maria Clarke, Adam Hack, Stats Wong and Thomas Zuberbühler">
     <meta name="description" content="Interactive Webmap Assignment using Mapublisher">
@@ -96,7 +96,7 @@
         <!-- don't use Mapublisher Webmap Export a "real" web application, use d3.js or something similar instead !!!
              or at least only use it only if you have 1 (one) instance of a map and integrate it within your own
              website. this iframe soluation is a workaround to meet the assignment requirements -->
-        <iframe id="mapIFrame" src="maps/nova-scotia/index.html" title="Map" width="900" height="500"></iframe>
+        <iframe id="mapIFrame" class="panel-design" src="maps/nova-scotia/index.html" title="Map" width="900" height="500"></iframe>
 
       </div>
       <div id="mapBusyPanel" class="hide">
@@ -106,8 +106,30 @@
           <div style="margin-top: 10px;">Loading...</div>
         </div>
       </div>
-      <div id="legend" class="hide" style="background-color: pink;">
-        Legend
+      <div id="legend" class="panel-design hide">
+        <h5>Legend</h5>
+        <table border=0>
+          <tr>
+            <td class="class-color" style="background: red;"></td>
+            <td class="class-description">80-100</td>
+          </tr>
+          <tr>
+            <td class="class-color" style="background: blue;"></td>
+            <td class="class-description">60-80</td>
+          </tr>
+          <tr>
+            <td class="class-color" style="background: green;"></td>
+            <td class="class-description">40-60</td>
+          </tr>
+          <tr>
+            <td class="class-color" style="background: orange;"></td>
+            <td class="class-description">20-40</td>
+          </tr>
+          <tr>
+            <td class="class-color" style="background: yellow;"></td>
+            <td class="class-description">0-20</td>
+          </tr>
+        </table>
       </div>
     </div>
 
