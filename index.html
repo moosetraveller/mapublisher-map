@@ -31,58 +31,55 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Population Statistics</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div id="navbarNavDropdown">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" onclick="selectMap('Nova Scotia')">Overview</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" onclick="selectMap('Halifax')">Halifax</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">
-              South Shore
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" onclick="selectMap('Annapolis')">Annapolis</a>
-              <a class="dropdown-item" onclick="selectMap('Digby')">Digby</a>
-              <a class="dropdown-item" onclick="selectMap('Lunenburg')">Lunenburg</a>
-              <a class="dropdown-item" onclick="selectMap('Shelburne')">Shelburne</a>
-              <a class="dropdown-item" onclick="selectMap('Queens')">Queens</a>
-              <a class="dropdown-item" onclick="selectMap('Yarmouth')">Yarmouth</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">
-              Mainland
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" onclick="selectMap('Antigonish')">Antigonish</a>
-              <a class="dropdown-item" onclick="selectMap('Colchester')">Colchester</a>
-              <a class="dropdown-item" onclick="selectMap('Cumberland')">Cumberland</a>
-              <a class="dropdown-item" onclick="selectMap('Guysborough')">Guysborough</a>
-              <a class="dropdown-item" onclick="selectMap('Kings')">Kings</a>
-              <a class="dropdown-item" onclick="selectMap('Hants')">Hants</a>
-              <a class="dropdown-item" onclick="selectMap('Pictou')">Pictou</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">
-              Cape Breton
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" onclick="selectMap('Cape Breton')">Cape Breton</a>
-              <a class="dropdown-item" onclick="selectMap('Inverness')">Inverness</a>
-              <a class="dropdown-item" onclick="selectMap('Richmond')">Richmond</a>
-              <a class="dropdown-item" onclick="selectMap('Victoria')">Victoria</a>
-            </div>
-          </li>
-        </ul>
+        <li class="nav-item">
+         <a id="novascotiaLink" class="nav-link" onclick="selectMap('Nova Scotia')">Overview</a>
+        </li>
+        <li class="nav-item">
+         <a id="halifaxLink" class="nav-link" onclick="selectMap('Halifax')">Halifax</a>
+        </li>
+        <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">
+           South Shore
+         </a>
+         <div class="dropdown-menu">
+           <a id="annapolisLink" class="dropdown-item" onclick="selectMap('Annapolis')">Annapolis</a>
+           <a id="digbyLink" class="dropdown-item" onclick="selectMap('Digby')">Digby</a>
+           <a id="lunenburgLink" class="dropdown-item" onclick="selectMap('Lunenburg')">Lunenburg</a>
+           <a id="shelburneLink" class="dropdown-item" onclick="selectMap('Shelburne')">Shelburne</a>
+           <a id="queensLink" class="dropdown-item" onclick="selectMap('Queens')">Queens</a>
+           <a id="yarmouthLink" class="dropdown-item" onclick="selectMap('Yarmouth')">Yarmouth</a>
+         </div>
+        </li>
+        <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">
+           Mainland
+         </a>
+         <div class="dropdown-menu">
+           <a id="antigonishLink" class="dropdown-item" onclick="selectMap('Antigonish')">Antigonish</a>
+           <a id="colchesterLink" class="dropdown-item" onclick="selectMap('Colchester')">Colchester</a>
+           <a id="cumberlandLink" class="dropdown-item" onclick="selectMap('Cumberland')">Cumberland</a>
+           <a id="guysboroughLink" class="dropdown-item" onclick="selectMap('Guysborough')">Guysborough</a>
+           <a id="kingsLink" class="dropdown-item" onclick="selectMap('Kings')">Kings</a>
+           <a id="hantsLink" class="dropdown-item" onclick="selectMap('Hants')">Hants</a>
+           <a id="pictouLink" class="dropdown-item" onclick="selectMap('Pictou')">Pictou</a>
+         </div>
+        </li>
+        <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">
+           Cape Breton
+         </a>
+         <div class="dropdown-menu">
+           <a id="capebretonLink" class="dropdown-item" onclick="selectMap('Cape Breton')">Cape Breton</a>
+           <a id="invernessLink" class="dropdown-item" onclick="selectMap('Inverness')">Inverness</a>
+           <a id="richmondLink" class="dropdown-item" onclick="selectMap('Richmond')">Richmond</a>
+           <a id="victoriaLink" class="dropdown-item" onclick="selectMap('Victoria')">Victoria</a>
+         </div>
+        </li>
+       </ul>
       </div>
     </nav>
 
