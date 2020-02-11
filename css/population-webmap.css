@@ -1,3 +1,42 @@
+@font-face {
+    font-family: 'ElMessiri';
+    src: url('fonts/ElMessiri-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ElMessiri';
+    src: url('fonts/ElMessiri-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Puritan';
+    src: url('fonts/Puritan-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Puritan';
+    src: url('fonts/Puritan-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NotoSerifKR';
+    src: url('fonts/NotoSerifKR-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font-family: "ElMessiri", Helvetica, sans-serif;
+}
+
 .hide {
   display: none;
 }
@@ -7,23 +46,13 @@ nav .dropdown-item, nav .nav-link {
 }
 
 .container.header {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .container.content {
   display: flex;
   position: relative;
 }
-
-/*
-.container.header > h3 {
-  text-transform: lowercase;
-}
-
-.container.header > h3::first-letter {
-  text-transform: uppercase;
-}
-*/
 
 h5 {
     font-size: 1rem;
@@ -55,6 +84,13 @@ nav.navbar .nav-item {
 
 .navbar-brand {
   margin: 10px;
+  padding-right: 2rem;
+  cursor: default !important;
+  font-weight: bold;
+}
+
+.nav-link {
+  padding: 0.5rem 1.5rem !important;
 }
 
 .dropdown-item.active {
