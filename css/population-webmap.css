@@ -143,7 +143,8 @@ nav.navbar .nav-item {
     display: block;
     overflow: auto;
     text-align: center;
-    padding: 8rem 8rem 7rem 8rem;
+    margin-top: 7rem;
+    padding: 1rem 5rem 0rem 5rem;
   }
 }
 
@@ -177,5 +178,7 @@ nav.navbar .nav-item {
 
 .class-description {
   padding-left: 15px;
-  vertical-align: middle;
+  vertical-align: bottom;
+  line-height: 1.2rem;
+  padding-top: 0.2rem;
 }
