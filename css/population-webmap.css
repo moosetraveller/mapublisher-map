@@ -55,12 +55,16 @@ nav .dropdown-item, nav .nav-link {
 }
 
 h5 {
-    font-size: 1rem;
-    font-weight: 600;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 body, nav, .container {
-  min-width: 985px !important;
+  min-width: 985px;
+}
+
+.container {
+  margin: 0.5rem 10px;
 }
 
 body {
@@ -115,9 +119,32 @@ nav.navbar .nav-item {
   bottom: 0px;
   left: 0px;
   min-width: 100%;
-  min-height: 506px;
+  min-height: 500px;
+  margin-bottom: 8.5px; /* hack: something weird happening with the iframe size */
   padding-top: 100px;
   background-color: rgb(33, 37, 41, 0.05);
+  border: 1px solid #4B4B4B;
+  border-radius: 5px;
+}
+
+.warning {
+  display: none;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  body > *:not(.warning), iframe, .container {
+    display: none !important;
+  }
+  body {
+    min-width: 100%;
+  }
+  .warning {
+    display: block;
+    overflow: auto;
+    text-align: center;
+    padding: 8rem 8rem 7rem 8rem;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
