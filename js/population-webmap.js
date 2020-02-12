@@ -69,16 +69,5 @@ function initAvenzaViewer(county) {
   });
 }
 
-// /**
-//  * Applies iframe.css to the iframe.
-//  */
-// function applyCssToIFrame() {
-//   var cssLink = document.createElement("link");
-//   cssLink.href = "../../css/iframe.css"; 
-//   cssLink.rel = "stylesheet"; 
-//   cssLink.type = "text/css"; 
-//   frames['mapIFrame'].contentDocument.head.appendChild(cssLink);
-// }
-
 AVENZA._showDialog = function() { /* HACK: we don't want avenza's loading dialog shown */ }
 // AVENZA.Viewer.prototype._setVisible = function() {}
