@@ -1,3 +1,5 @@
+let currentAvenzaViewer = undefined;
+
 /**
  * Changes map in iframe.
  */
@@ -7,8 +9,9 @@ function showMap(map) {
   $('#mapBusyPanel').removeClass('hide');
 
   $('.nav-item, .dropdown-item').removeClass('active');
-
-  $('#mapIFrame').attr('src', 'maps/' + map.toLowerCase() + '/index.html');
+  
+  initAvenzaViewer('halifax');
+  
   $('.header>h3').html(map.replace('-', ' '))
 
   const link = $('#' + map.toLowerCase().replace(' ', '') + 'Link');
@@ -19,10 +22,10 @@ function showMap(map) {
   else {
     link.parent().addClass('active');
   }
-
+ 
   // artificial 1s busy panel to replace bad flickering with an okay-ish one
   window.setTimeout(() => {
-    applyCssToIFrame();
+    initAvenzaViewer('halifax');
     $('#mapContainer, #legend').removeClass('hide');
     $('#mapBusyPanel').addClass('hide');
   }, 1000);
@@ -38,12 +41,44 @@ function selectMap(map) {
 }
 
 /**
- * Applies iframe.css to the iframe.
+ * Removes previous added Avenza viewers from DOM.
  */
-function applyCssToIFrame() {
-  var cssLink = document.createElement("link");
-  cssLink.href = "../../css/iframe.css"; 
-  cssLink.rel = "stylesheet"; 
-  cssLink.type = "text/css"; 
-  frames['mapIFrame'].contentDocument.head.appendChild(cssLink);
+function removePreviousAvenzaViewer() {
+  delete currentAvenzaViewer;
+  $('#avenzaMapContainer .openseadragon-container').remove();
 }
+
+/**
+ * Initialize an Avenza viewer for given county. Removes previous added viewers
+ * from DOM if necessary. 
+ */
+function initAvenzaViewer(county) {
+  removePreviousAvenzaViewer();
+  AVENZA.initialize();
+  currentAvenzaViewer = AVENZA.embedViewer({
+    id: 'avenzaMapContainer',
+    descButtonId: 'avenzaDescButton',
+    descPanelId: 'avenzaDescPanel',
+    legendButtonId: 'avenzaLegendButton',
+    legendPanelId: 'avenzaLegendPanel',
+    legendImageId: 'avenzaLegendImage',
+    prefixUrl: 'maps/' + county + '/index_data/',
+    enableZoomSelection: true,
+    layerList: AVENZA.HIDDEN,
+    minZoomImageRatio: 0.9
+  });
+}
+
+// /**
+//  * Applies iframe.css to the iframe.
+//  */
+// function applyCssToIFrame() {
+//   var cssLink = document.createElement("link");
+//   cssLink.href = "../../css/iframe.css"; 
+//   cssLink.rel = "stylesheet"; 
+//   cssLink.type = "text/css"; 
+//   frames['mapIFrame'].contentDocument.head.appendChild(cssLink);
+// }
+
+AVENZA._showDialog = function() { /* HACK: we don't want avenza's loading dialog shown */ }
+// AVENZA.Viewer.prototype._setVisible = function() {}
