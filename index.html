@@ -10,49 +10,16 @@
 
     <title>Population in Nova Scotia</title>
 
-    <style>
-      @font-face {
-          font-family: 'ElMessiri';
-          src: url('fonts/ElMessiri-Regular.ttf') format('truetype');
-          font-weight: normal;
-          font-style: normal;
-      }
-
-      @font-face {
-          font-family: 'ElMessiri';
-          src: url('fonts/ElMessiri-Bold.ttf') format('truetype');
-          font-weight: bold;
-          font-style: normal;
-      }
-
-      @font-face {
-          font-family: 'Puritan';
-          src: url('fonts/Puritan-Regular.ttf') format('truetype');
-          font-weight: normal;
-          font-style: normal;
-      }
-
-      @font-face {
-          font-family: 'Puritan';
-          src: url('fonts/Puritan-Bold.ttf') format('truetype');
-          font-weight: bold;
-          font-style: normal;
-      }
-
-      @font-face {
-          font-family: 'NotoSerifKR';
-          src: url('fonts/NotoSerifKR-Regular.ttf') format('truetype');
-          font-weight: normal;
-          font-style: normal;
-      }
-    </style>
-
     <link rel="stylesheet" href="./css/bootstrap-4.4.1/bootstrap.css">
     <link rel="stylesheet" href="./css/population-webmap.css">
 
     <script src="./js/jquery-3.4.1.js" charset="utf-8"></script>
     <script src="./js/bootstrap-4.4.1/bootstrap.js" charset="utf-8"></script>
 
+    <script src="./maps/halifax/index_data/openseadragon-min.js"></script>
+    <script src="./maps/halifax/index_data/avenza-viewer.js"></script>
+
+    <script src="./js/map-legend.js" charset="utf-8"></script>
     <script type="text/javascript">
 
       const href = window.location.href;
@@ -139,7 +106,32 @@
         <!-- don't use Mapublisher Webmap Export a "real" web application, use d3.js or something similar instead !!!
              or at least only use it only if you have 1 (one) instance of a map and integrate it within your own
              website. this iframe soluation is a workaround to meet the assignment requirements -->
-        <iframe id="mapIFrame" class="panel-design" src="maps/nova-scotia/index.html" title="Map" width="900" height="500"></iframe>
+        <!-- <iframe id="mapIFrame" class="panel-design" src="maps/nova-scotia/index.html" title="Map" width="900" height="500"></iframe> -->
+
+        <div id="avenzaContainer">
+          
+          <button id="avenzaDescButton" class="desc-button">
+          </button>
+      
+          <div id="avenzaDescPanel" class="desc-panel">
+          </div>
+      
+          <button id="avenzaLegendButton" class="legend-button">
+          </button>
+      
+          <div id="avenzaLegendPanel" class="legend-panel">
+          </div>
+        
+          <div style="display:none">
+            <!-- 
+            The message below will appear instead of the map if a user connects with a browser that does not support 
+            enough HTML5 for the map viewer to function.  You may wish to customize the message for your site.
+            -->
+            A web browser that supports HTML5 is required in order to view this content.  If you are seeing this message
+            then your current web browser does not.  Please upgrade.
+          </div>
+
+        </div>
 
       </div>
       <div id="mapBusyPanel" class="hide">

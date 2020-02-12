@@ -28,13 +28,12 @@
 
 @font-face {
     font-family: 'NotoSerifKR';
-    src: url('fonts/NotoSerifKR-Regular.ttf') format('truetype');
-    font-weight: normal;
+    src: url('fonts/NotoSerifKR-Regular.otf') format('opentype');
     font-style: normal;
 }
 
 body {
-  font-family: "ElMessiri", Helvetica, sans-serif;
+  font-family: "NotoSerifKR", Helvetica, sans-serif;
 }
 
 .hide {
@@ -46,6 +45,7 @@ nav .dropdown-item, nav .nav-link {
 }
 
 .container.header {
+  font-family: "ElMessiri", Helvetica, sans-serif;
   margin-top: 2rem;
 }
 
@@ -60,7 +60,7 @@ h5 {
 }
 
 body, nav, .container {
-  min-width: 985px;
+  min-width: 935px;
 }
 
 .container {
@@ -87,6 +87,8 @@ nav.navbar .nav-item {
 }
 
 .navbar-brand {
+  font-family: "ElMessiri", Helvetica, sans-serif;
+  font-size: 1.5rem;
   margin: 10px;
   padding-right: 2rem;
   cursor: default !important;
@@ -122,8 +124,8 @@ nav.navbar .nav-item {
   min-height: 500px;
   margin-bottom: 8.5px; /* hack: something weird happening with the iframe size */
   padding-top: 100px;
-  background-color: rgb(33, 37, 41, 0.05);
-  border: 1px solid #4B4B4B;
+  background-color: rgba(0,0,0,.125);
+  border: 1px solid rgba(0,0,0,.125);
   border-radius: 5px;
 }
 

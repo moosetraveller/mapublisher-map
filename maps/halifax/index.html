@@ -73,6 +73,19 @@
 				layerList: AVENZA.HIDDEN,
 				minZoomImageRatio: 0.9
 			});
+			AVENZA.initialize();
+			avenzaViewer = AVENZA.embedViewer({
+				id: 'map_container',
+				descButtonId: 'map_descButton',
+				descPanelId: 'map_descPanel',
+				legendButtonId: 'map_legendButton',
+				legendPanelId: 'map_legendPanel',
+				legendImageId: 'map_legendImage',
+				prefixUrl: 'index_data/',
+				enableZoomSelection: true,
+				layerList: AVENZA.HIDDEN,
+				minZoomImageRatio: 0.9
+			});
 		});
 	</script>
 </head>
