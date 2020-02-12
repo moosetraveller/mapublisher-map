@@ -44,7 +44,7 @@ function selectMap(map) {
  * Removes previous added Avenza viewers from DOM.
  */
 function removePreviousAvenzaViewer() {
-  delete currentAvenzaViewer;
+  delete currentAvenzaViewer; // release object
   $('#avenzaMapContainer .openseadragon-container').remove();
 }
 
@@ -62,7 +62,7 @@ function initAvenzaViewer(county) {
     legendButtonId: 'avenzaLegendButton',
     legendPanelId: 'avenzaLegendPanel',
     legendImageId: 'avenzaLegendImage',
-    prefixUrl: 'maps/' + county + '/index_data/',
+    prefixUrl: 'maps/' + county,
     enableZoomSelection: true,
     layerList: AVENZA.HIDDEN,
     minZoomImageRatio: 0.9
