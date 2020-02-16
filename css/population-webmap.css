@@ -34,14 +34,27 @@
 
 body {
   font-family: "NotoSerifKR", Helvetica, sans-serif;
+  font-size: 15px;
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 nav .dropdown-item, nav .nav-link {
   cursor: pointer;
+}
+
+#imageMap>area {
+  cursor: pointer;
+}
+
+#imageMap>area::hover {
+  background-color: wheat;
+}
+
+.footer {
+  font-size: 0.7rem;
 }
 
 .container.header {
@@ -55,7 +68,7 @@ nav .dropdown-item, nav .nav-link {
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
@@ -118,6 +131,7 @@ nav.navbar .nav-item {
   /* height: calc(100% - 20px); */
   height: 100%;
   margin-bottom: 5px;
+  font-size: 0.9rem;
 }
 
 #mapBusyPanel {
