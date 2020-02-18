@@ -93,7 +93,7 @@ function selectMap(map) {
  */
 function removePreviousAvenzaViewer() {
   delete currentAvenzaViewer; // release object
-  $('#avenzaMapContainer .openseadragon-container').remove();
+  $('#avenzaMapContainer .openseadragon-container, #avenzaMapContainer .avz-dropshadow').remove();
 }
 
 /**
