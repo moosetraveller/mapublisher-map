@@ -48,13 +48,20 @@ function showMap(map) {
   
   $('.header>h3').html(isStringEmpty(map) ? 'Overview Map' : map.replace('-', ' '));
 
-  const link = $('#' + map.toLowerCase().replace(' ', '') + 'Link');
-  if (link.hasClass('dropdown-item')) {
-    link.addClass('active');
-    link.parent().parent().addClass('active');
+  if (!isStringEmpty(map)) {
+    
+    const link = $('#' + map.toLowerCase().replace(' ', '') + 'Link');
+    if (link.hasClass('dropdown-item')) {
+      link.addClass('active');
+      link.parent().parent().addClass('active');
+    }
+    else {
+      link.parent().addClass('active');
+    }
+
   }
   else {
-    link.parent().addClass('active');
+    $('#novascotiaLink').parent().addClass('active');
   }
 
   if (isStringEmpty(map)) {
