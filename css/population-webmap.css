@@ -57,6 +57,24 @@ nav .dropdown-item, nav .nav-link {
   font-size: 0.7rem;
 }
 
+.avz-dropshadow {
+  top: unset !important;
+  bottom: 5px !important;
+}
+
+.avz-dropshadow {
+  font-family: "NotoSerifKR", Helvetica, sans-serif;
+}
+
+.avz-dropshadow .avz-webtag-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.avz-dropshadow .avz-webtag {
+  font-size: 0.9rem;
+}
+
 .container.header {
   font-family: "ElMessiri", Helvetica, sans-serif;
   margin-top: 2rem;

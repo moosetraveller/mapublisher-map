@@ -25,13 +25,11 @@ function showCountyMap(map) {
   $('.overview-container').addClass('hide');
   $('.county-container').removeClass('hide');
 
-  initAvenzaViewer('halifax');
-
   updateLegend(map);
+  initAvenzaViewer(map);
  
   // artificial 1s busy panel to replace bad flickering with an okay-ish one
   window.setTimeout(() => {
-    initAvenzaViewer('halifax');
     $('#mapContainer, #legend').removeClass('hide');
     $('#mapBusyPanel').addClass('hide');
   }, 1000);
@@ -115,6 +113,10 @@ function initAvenzaViewer(county) {
     prefixUrl: 'maps/' + county,
     enableZoomSelection: false,
     layerList: AVENZA.HIDDEN,
+    disableClickCallout: true,
+    disableHoverCallout: true,
+    fixedCallout: true,
+    fixedCalloutPosition: AVENZA.QUAD.BOTTOM_LEFT,
     minZoomImageRatio: 0.9
   });
 }
