@@ -8,7 +8,7 @@
     <meta name="author" content="Maria Clarke, Adam Hack, Stats Wong and Thomas Zuberbühler">
     <meta name="description" content="Interactive Webmap Assignment using Mapublisher">
 
-    <title>Population in Nova Scotia</title> 
+    <title>Population in Nova Scotia</title>
 
     <link rel="stylesheet" href="./css/bootstrap-4.4.1/bootstrap.css">
     <link rel="stylesheet" href="./css/population-webmap.css">
@@ -22,7 +22,7 @@
     <script src="./js/avenza/avenza-viewer.js"></script>
 
     <script src="./js/bootstrap-4.4.1/bootstrap.js" charset="utf-8"></script>
- 
+
     <script src="./js/map-legend.js" charset="utf-8"></script>
     <script type="text/javascript">
 
@@ -59,7 +59,7 @@
          <a id="halifaxLink" class="nav-link" onclick="selectMap('Halifax')">Halifax</a>
         </li>
         <li class="nav-item dropdown">
-         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">
+         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown">
            South Shore
          </a>
          <div class="dropdown-menu">
@@ -72,7 +72,7 @@
          </div>
         </li>
         <li class="nav-item dropdown">
-         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">
+         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-toggle="dropdown">
            Mainland
          </a>
          <div class="dropdown-menu">
@@ -86,7 +86,7 @@
          </div>
         </li>
         <li class="nav-item dropdown">
-         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">
+         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button" data-toggle="dropdown">
            Cape Breton
          </a>
          <div class="dropdown-menu">
@@ -113,28 +113,28 @@
           <area target="" alt="Halifax" title="Halifax" href="" coords="341,323,360,342,370,372,457,355,546,311,480,261,421,289,408,299,396,301,383,306,379,317" shape="poly">
         </map>
       </div>
-    </div> 
+    </div>
 
     <div class="container content county-container hide">
       <div id="mapContainer" class="hide">
 
         <div id="avenzaMapContainer" class="panel-design">
-          
+
           <button id="avenzaDescButton" class="desc-button">
           </button>
-      
+
           <div id="avenzaDescPanel" class="desc-panel">
           </div>
-      
+
           <button id="avenzaLegendButton" class="legend-button">
           </button>
-      
+
           <div id="avenzaLegendPanel" class="legend-panel">
           </div>
-        
+
           <div style="display:none">
-            <!-- 
-            The message below will appear instead of the map if a user connects with a browser that does not support 
+            <!--
+            The message below will appear instead of the map if a user connects with a browser that does not support
             enough HTML5 for the map viewer to function.  You may wish to customize the message for your site.
             -->
             A web browser that supports HTML5 is required in order to view this content. If you are seeing this message
@@ -152,46 +152,46 @@
         </div>
       </div>
       <div id="legend" class="panel-design hide">
-        <h5>Legend</h5>
-        <table border=0>
+        <h6>Population Density</h6>
+        <table border="0" title="Quantile Classification">
           <tr>
-            <td class="class-color" style="background: rgb(231, 238, 180);"></td>
+            <td class="class-color" style="background: #E7EEB4;"></td>
             <td class="class-description" id="legend0">80-100</td>
           </tr>
           <tr>
-            <td class="class-color" style="background: rgb(211, 224, 105);"></td>
+            <td class="class-color" style="background: #DDE789;"></td>
             <td class="class-description" id="legend1">60-80</td>
           </tr>
           <tr>
-            <td class="class-color" style="background: rgb(128, 208, 215);"></td>
+            <td class="class-color" style="background: #D3E069;"></td>
             <td class="class-description" id="legend2">40-60</td>
           </tr>
           <tr>
-            <td class="class-color" style="background: rgb(0, 177, 182);"></td>
+            <td class="class-color" style="background: #AAD8A0;"></td>
             <td class="class-description" id="legend3">20-40</td>
           </tr>
           <tr>
-            <td class="class-color" style="background: rgb(6, 124, 128);"></td>
+            <td class="class-color" style="background: #80D0D7;"></td>
             <td class="class-description" id="legend4">0-20</td>
           </tr>
           <tr>
-            <td class="class-color" style="background: rgb(231, 238, 180);"></td>
+            <td class="class-color" style="background: #40C1C6;"></td>
             <td class="class-description" id="legend5">80-100</td>
           </tr>
           <tr>
-            <td class="class-color" style="background: rgb(211, 224, 105);"></td>
+            <td class="class-color" style="background: #00B1B6;"></td>
             <td class="class-description" id="legend6">60-80</td>
           </tr>
           <tr>
-            <td class="class-color" style="background: rgb(128, 208, 215);"></td>
+            <td class="class-color" style="background: #03969B;"></td>
             <td class="class-description" id="legend7">40-60</td>
           </tr>
           <tr>
-            <td class="class-color" style="background: rgb(0, 177, 182);"></td>
+            <td class="class-color" style="background: #067C80;"></td>
             <td class="class-description" id="legend8">20-40</td>
           </tr>
           <tr>
-            <td class="class-color" style="background: rgb(6, 124, 128);"></td>
+            <td class="class-color" style="background: #00575A;"></td>
             <td class="class-description" id="legend9">0-20</td>
           </tr>
         </table>
@@ -199,7 +199,8 @@
     </div>
 
     <div class="container footer">
-      © Maria Clarke, Adam Hack, Stats Wong and Thomas Zuberbühler
+      © 2020 Maria Clarke, Adam Hack, Stats Wong and Thomas Zuberbühler<br/>
+      Use of Mapublisher's webmap export was customer-specified.
     </div>
 
   </body>

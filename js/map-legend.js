@@ -1,15 +1,15 @@
 const legend = {
     'halifax': [
-        'Halifax 1-10',
-        'Halifax 10-20',
-        'Halifax 30-40',
-        'Halifax 40-50',
-        'Halifax 50-60',
-        'Halifax 60-70',
-        'Halifax 70-80',
-        'Halifax 80-90',
-        'Halifax 90-100',
-        'Halifax 100-110'
+        '    0 to     46',
+        '   46 to    218',
+        '  218 to    573',
+        '  573 to  1,262',
+        '1,262 to  1,946',
+        '1,946 to  2,549',
+        '2,549 to  3,060',
+        '3,060 to  3,998',
+        '3,998 to  5,734',
+        '5,734 to 49,019'
     ],
     'annapolis': [
         'Annapolis 1-10',
@@ -57,7 +57,7 @@ const legend = {
         '',
         '',
         '',
-        ''        
+        ''
     ],
     'queens': [
         '',

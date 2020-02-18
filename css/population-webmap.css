@@ -12,28 +12,8 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Puritan';
-    src: url('fonts/Puritan-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Puritan';
-    src: url('fonts/Puritan-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'NotoSerifKR';
-    src: url('fonts/NotoSerifKR-Regular.otf') format('opentype');
-    font-style: normal;
-}
-
 body {
-  font-family: "NotoSerifKR", Helvetica, sans-serif;
+  font-family: "Tahoma", Helvetica, sans-serif;
   font-size: 15px;
 }
 
@@ -49,7 +29,7 @@ nav .dropdown-item, nav .nav-link {
   cursor: pointer;
 }
 
-#imageMap>area::hover {
+#imageMap>area:hover {
   background-color: wheat;
 }
 
@@ -64,7 +44,7 @@ nav .dropdown-item, nav .nav-link {
 }
 
 .avz-dropshadow {
-  font-family: "NotoSerifKR", Helvetica, sans-serif;
+  font-family: "Roboto", Helvetica, sans-serif;
 }
 
 .avz-dropshadow .avz-webtag-title {
@@ -170,7 +150,7 @@ nav.navbar .nav-item {
   height: 100%;
   margin-bottom: 5px;
   font-size: 0.9rem;
-    
+
   -moz-box-shadow: 0px 1px 4px #777777;
   -webkit-box-shadow: 0px 1px 4px #777777;
   box-shadow: 0px 1px 4px #777777;
@@ -218,16 +198,15 @@ nav.navbar .nav-item {
     left: 718px;
     width: 190px;
     max-width: 190px;
-    /* height: calc(100% - 20px); */
     height: auto;
-    z-index: 1000;
+    z-index: 999; /* dropdown is 1000! */
   }
 }
 
 .panel-design {
     border: 1px solid #4B4B4B;
     border-radius: 5px;
-    
+
     -moz-box-shadow: 0px 1px 4px #777777;
     -webkit-box-shadow: 0px 1px 4px #777777;
     box-shadow: 0px 1px 4px #777777;
