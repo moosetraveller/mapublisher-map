@@ -1,0 +1,39 @@
+<div class="popup-sub-title" title="Census Sub Division Name">
+%CSDNAME%
+</div>
+<div class="popup-title" title="Dissemination Area ID">
+%DAUID%
+</div>
+
+
+<div class="popup-pre-table">
+</div>
+<div class="popup-table-wrapper">
+  <table class="popup-table">
+    <tbody>
+      <tr>
+        <th class="popup-table-value-label" valign="top">Population</th>
+        <td class="popup-table-value" valign="top">%DApop2016%</td>
+        <td class="popup-table-value-unit" valign="top"></td>
+      </tr>
+      <tr>
+        <th class="popup-table-value-label" valign="top">Population Density</th>
+        <td class="rounding popup-table-value" valign="top">%PopDensity%</td>
+        <td class="popup-table-value-unit" valign="top" title="people per square kilometre">/km&sup2;</td>
+      </tr>
+      <tr>
+        <th class="popup-table-value-label" valign="top">Area</th>
+        <td class="rounding popup-table-value" valign="top">%DAarea%</td>
+        <td class="popup-table-value-unit" valign="top" title="square kilometre">km&sup2;</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="popup-post-table">
+</div>
+
+<script>
+  $('.rounding').each((key, element) => {
+    $(element).text(Math.round($(element).text() * 100) / 100);
+  });
+</script>
