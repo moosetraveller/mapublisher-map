@@ -117,13 +117,17 @@
               </button>
             </div>
             <div class="modal-body">
+              <h5>Introduction</h5>
+              <p class="justified">
+                Population growth is an important indicator in measuring the overall growth of a given region. More specifically is population density, which conveys the concentration of individuals per unit area of land. In the case of Nova Scotia, the province is divided into 18 counties. Each of those counties is further subdivided by dissemination area (DA). According to Statistics Canada, a dissemination area contains one or more adjacent blocks, each with a respective population of 400 to 700 people, comprising of thousands of dissemination areas throughout the entire province. (Statistics Canada, 2012)
+              </p>
               <h5>Data</h5>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              <p class="justified">
+                The data used for this project was extracted from Statistics Canada. The provincial road network was downloaded the Nova Scotia Topographic Database, accessed through GeoNOVA. Additionally, place names were also downloaded from the government’s GeoNAME’s data website. Starting with ArcGIS Pro 2.4, joins were completed between the data tables to ensure all necessary attributes were included. For example, to give the map some additional context, filtered road feature datasets were joined with polygon data of each county. This ensured that the number of communities within each county would be manageable. As the main dataset, acquiring a field for population density by dissemination area was key. As such, it was derived from the total population divided by the total area of each DA accordingly. Population density is what we have decided to map.
               </p>
               <h5>Process and Production</h5>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              <p class="justified">
+                Once the data was prepared, it was added into ArcGIS for Desktop 10.7 and exported to shapefiles by county. The conversion to shapefiles enabled the data to be imported into Avenza MaPublisher 10.5. As a plugin of Adobe Illustrator 2019, MaPublisher provides cartographic styling within the graphics package itself. Once imported, the data was styled with the appropriate themes and associated colour palettes. For this project, the two primary styles included one for the overview map of Nova Scotia, and another for each county. A blue colour ramp with 10 classes was chosen for each county to maintain consistency. Road and community point graphic styles and symbols were applied to complete the cartography, as well as place names and additional map elements. Upon completion of the 18 counties, they were each exported to HTML5 using standard settings, which introduced interactivity into the maps. The final exported maps were then embedded into a custom-written website with an iframe container of 900 x 500 pixels. The legend for each map exists on the website, outside of the map frame to ensure it always remains visible on the screen. When the user clicks on a DA, a popup appears to relay information from the primary attribute table, namely population density, total population, and the area in square kilometres.
               </p>
               <h5>Sources</h5>
               <p><b>Population Density Data</b><br/>
@@ -131,6 +135,9 @@
                 Statistics Canada Catalogue no. 98-402-X2016001. Ottawa. Released February 8, 2017.</p>
               <p><b>Dissemination Area</b><br/>
                 Dissemination Area Boundary File, 2016 Census. Statistics Canada Catalogue no. 92-169-X.</p>
+              <p><b>Introduction Text Source</b><br/>
+                Statistics Canada. 2012. 2011 Census Dictionary. Statistics Canada Catalogue no. 98-301-X. Ottawa.
+https://www12.statcan.gc.ca/census-recensement/2011/ref/dict/geo021-eng.cfm (accessed February 25, 2020). </p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

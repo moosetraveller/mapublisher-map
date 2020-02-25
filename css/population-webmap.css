@@ -215,6 +215,11 @@ nav.navbar .nav-item {
   width: 100%;
 }
 
+.modal-body p.justified {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .class-color {
   width: 32px;
   height: 16px;
