@@ -12,6 +12,7 @@ The legend for each map exists on the website, outside of the map frame to ensur
 ## Sources
 ### Population Density Data
 Statistics Canada. 2017. Population and Dwelling Count Highlight Tables. 2016 Census.
+
 Statistics Canada Catalogue no. 98-402-X2016001. Ottawa. Released February 8, 2017.
 
 ### Dissemination Area
