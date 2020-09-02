@@ -1,7 +1,7 @@
 # CART 3031 - Mapublisher Webmap
 
 ## Disclaimer
-Use of Mapublisher's webmap export was customer-specified for school assignment. There are better ways to publish webmaps.
+**Use of Mapublisher's webmap export was customer-specified for school assignment. There are better ways to publish webmaps such as using D3.js, Leaflet or OpenLayers.**
 
 ## Introduction
 Population growth is an important indicator in measuring the overall growth of a given region. More specifically is population density, which conveys the concentration of individuals per unit area of land. In the case of Nova Scotia, the province is divided into 18 counties. Each of those counties is further subdivided by dissemination area (DA). According to Statistics Canada, a dissemination area contains one or more adjacent blocks, each with a respective population of 400 to 700 people, comprising of thousands of dissemination areas throughout the entire province. (Statistics Canada, 2012)
