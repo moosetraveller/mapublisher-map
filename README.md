@@ -1,10 +1,14 @@
 # CART 3031 - Mapublisher Webmap
 
+## Disclaimer
+Use of Mapublisher's webmap export was customer-specified for school assignment. There are better ways to publish webmaps.
+
 ## Introduction
 Population growth is an important indicator in measuring the overall growth of a given region. More specifically is population density, which conveys the concentration of individuals per unit area of land. In the case of Nova Scotia, the province is divided into 18 counties. Each of those counties is further subdivided by dissemination area (DA). According to Statistics Canada, a dissemination area contains one or more adjacent blocks, each with a respective population of 400 to 700 people, comprising of thousands of dissemination areas throughout the entire province. (Statistics Canada, 2012)
 
 ## Data
 The data used for this project was extracted from Statistics Canada. The provincial road network was downloaded the Nova Scotia Topographic Database, accessed through GeoNOVA. Additionally, place names were also downloaded from the government’s GeoNAME’s data website. Starting with ArcGIS Pro 2.4, joins were completed between the data tables to ensure all necessary attributes were included. For example, to give the map some additional context, filtered road feature datasets were joined with polygon data of each county. This ensured that the number of communities within each county would be manageable. As the main dataset, acquiring a field for population density by dissemination area was key. As such, it was derived from the total population divided by the total area of each DA accordingly. Population density is what we have decided to map.
+
 ## Process and Production
 Once the data was prepared, it was added into ArcGIS for Desktop 10.7 and exported to shapefiles by county. The conversion to shapefiles enabled the data to be imported into Avenza MaPublisher 10.5. As a plugin of Adobe Illustrator 2019, MaPublisher provides cartographic styling within the graphics package itself. Once imported, the data was styled with the appropriate themes and associated colour palettes. For this project, the two primary styles included one for the overview map of Nova Scotia, and another for each county. A blue colour ramp with 10 classes was chosen for each county to maintain consistency. Road and community point graphic styles and symbols were applied to complete the cartography, as well as place names and additional map elements. Upon completion of the 18 counties, they were each exported to HTML5 using standard settings, which introduced interactivity into the maps. From the exported files, only the layer images and data.js files were embedded into the website where each map had been initialized using a customized JavaScript function. Doing so, we were able to avoid duplicated code and settings. Furthermore, the single page website is using jQuery 1.12.4 (an old version due to Avenza's JavaScript library requirements) and Bootstrap 4.4.1. The legend for each map exists on the website, outside of the map canvas to ensure it always remains visible on the screen. When the user clicks on a DA, a popup appears to relay information from the primary attribute table, namely population density, total population, and the area in square kilometres. This popup is displayed on the bottom left of the map to avoid covering map data and other issues.
 
@@ -21,6 +25,3 @@ Statistics Canada. 2012. 2011 Census Dictionary. Statistics Canada Catalogue no.
 
 ## License
 © 2020 Maria Clarke, Adam Hack, Stats Wong and Thomas Zuberbühler
-
-## Disclaimer
-Use of Mapublisher's webmap export was customer-specified.
