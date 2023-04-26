@@ -1,3 +1,7 @@
+**Warning: This project qas a school assignment and uses an ancient jQuery version due to customer-specified requirements.**
+
+---
+
 # CART 3031 - Mapublisher Webmap
 
 ## Disclaimer
