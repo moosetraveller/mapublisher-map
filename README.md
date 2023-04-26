@@ -1,4 +1,4 @@
-**Warning: This project qas a school assignment and uses an ancient jQuery version due to customer-specified requirements.**
+**Warning: This project was a school assignment and uses an ancient jQuery version due to customer-specified requirements.**
 
 ---
 
